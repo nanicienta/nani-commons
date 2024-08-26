@@ -1,14 +1,15 @@
 package constants
 
-type StepType string
+type FeatureName string
 
 const (
-	Postgres StepType = "postgres"
-	MongoDB  StepType = "mongodb"
-	Redis    StepType = "redis"
-	HTTP     StepType = "http"
-	JS       StepType = "js"
-	Email    StepType = "email"
-	Queue    StepType = "queue"
-	API      StepType = "api"
+	Postgres FeatureName = "postgres"
+	MongoDB  FeatureName = "mongodb"
+	Redis    FeatureName = "redis"
+	HTTP     FeatureName = "http"
+	JS       FeatureName = "js"
+	Email    FeatureName = "email"
+	Queue    FeatureName = "queue"
+	API      FeatureName = "api"
+	Flow     FeatureName = "flow"
 )
