@@ -11,5 +11,5 @@ type BaseConnection struct {
 	Database string `json:"database"`
 	User     string `json:"user"`
 	Password string `json:"password"`
-	Ssl      bool   `json:"ssl"`
+	Ssl      string `json:"ssl"`
 }

@@ -3,7 +3,10 @@ package features
 import "github.com/nanicienta/nani-commons/pkg/model"
 
 type Feature interface {
-	Execute(model.Node, model.Workflow)
+	Execute(model.Node, model.Workflow, map[string]interface{}) (
+		map[string]interface{}, string,
+		error,
+	)
 	GetInternalName() string
 }
 

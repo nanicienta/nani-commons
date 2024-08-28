@@ -15,8 +15,9 @@ type Workflow struct {
 	Context            map[string]interface{}
 }
 
-func (w *Workflow) GetNode(id string) Node {
-	return w.indexedNodes[id]
+func (w *Workflow) GetNode(id string) (bool, Node) {
+	node, exists := w.indexedNodes[id]
+	return exists, node
 }
 
 func (w *Workflow) InitWorkflow() {
@@ -30,4 +31,9 @@ func (w *Workflow) InitWorkflow() {
 	for _, conn := range w.Connections {
 		w.indexedConnections[conn.Id] = conn
 	}
+}
+
+func (w *Workflow) GetConnection(connectionId string) (bool, connections.BaseConnection) {
+	connection, exists := w.indexedConnections[connectionId]
+	return exists, connection
 }

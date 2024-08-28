@@ -1,13 +1,15 @@
 package model
 
 type Node struct {
-	Id            string  `json:"id"`
-	Type          string  `json:"type"`
-	Fields        []Field `json:"fields"`
-	Links         []Link  `json:"links"`
-	IsEnd         bool    `json:"isEnd"`
-	indexedLink   map[string]Link
-	indexedFields map[string]Field
+	Id                    string  `json:"id"`
+	Type                  string  `json:"type"`
+	ConnectionId          string  `json:"connectionId"`
+	Fields                []Field `json:"fields"`
+	Links                 []Link  `json:"links"`
+	StoreResultInVariable bool    `json:"storeResultInVariable"`
+	VariableName          string  `json:"variableName"`
+	indexedLink           map[string]Link
+	indexedFields         map[string]Field
 }
 
 func (n *Node) InitNode() {
