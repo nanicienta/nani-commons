@@ -37,3 +37,9 @@ func (w *Workflow) GetConnection(connectionId string) (bool, connections.BaseCon
 	connection, exists := w.indexedConnections[connectionId]
 	return exists, connection
 }
+
+func (w *Workflow) GetVariable(argument Argument) (interface{}, bool) {
+	//TODO implementar
+	panic("implement me")
+	return nil, false
+}
